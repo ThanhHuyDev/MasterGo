@@ -1,0 +1,27 @@
+import 'package:flutter/material.dart';
+import 'body_sigup.dart';
+class SignUp extends StatelessWidget {
+  static const String routeName = '/Sign_up';
+  const SignUp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        title: const Text("Sign Up",style: TextStyle(color: Colors.black,fontFamily: 'Muli')),
+        centerTitle: true,
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 0,
+        leading: IconButton(icon: const Icon(Icons.arrow_back_ios,color: Colors.black), onPressed: () {
+          Navigator.pop(context);
+        },),
+        actions: [
+          IconButton(icon: const Icon(Icons.segment_outlined,color: Colors.black), onPressed: () {  },iconSize: 30),
+        ],
+      ),
+      body: Body(),
+    );
+  }
+}
